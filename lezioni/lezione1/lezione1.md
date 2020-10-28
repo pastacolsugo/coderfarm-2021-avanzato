@@ -1,15 +1,15 @@
 # Lezione 1
 ## Indice
-- [Introduzione al corso](#introduzione-al-corso)
-- [Sondaggio preparazione](#sondaggio-preparazione)
-- [Ambiente di sviluppo](#ambiente-di-sviluppo)
-- [Piattaforma di allenamento](#piattaforma-di-allenamento)
-- [C++: Standard Library](#c++:-standard-library)
-- [C++: I/O da file](#c++:-i/o-da-file)
-- [C++: Vector](#c++:-vector)
-- [Task: easy1](#task:-easy1)
-- [Task: ois_streetlights](#task:-ois_streetlights)
-- [Esercizi da svolgere](#esercizi-da-svolgere)
+* [Introduzione al corso](#introduzione-al-corso)
+* [Sondaggio preparazione](#sondaggio-preparazione)
+* [Ambiente di sviluppo](#ambiente-di-sviluppo)
+* [Piattaforma di allenamento](#piattaforma-di-allenamento)
+* [C++: Standard Library](#c-standard-library)
+* [C++: I/O da file](#c-io-da-file)
+* [C++: Vector](#c-vector)
+* [Task: easy1](#task-easy1)
+* [Task: ois_streetlights](#task-ois-streetlights)
+* [Esercizi da svolgere](#esercizi-da-svolgere)
 
 ## Introduzione al corso
 
@@ -24,7 +24,7 @@ Il corso coprirà diversi argomenti, tra cui:
 - Algoritmi di sorting
 - Strutture dati "*avanzate*"
 
-Verranno utilizzati principalmente problemi provenienti dal sito training.olinfo.it.
+Verranno utilizzati principalmente problemi provenienti dal sito **[training.olinfo.it](training.olinfo.it)**.
 
 ## Sondaggio preparazione
 
@@ -36,7 +36,7 @@ Per chi non l'avesse ancora fatto, potete rispondere [qui](https://forms.gle/5Bm
 
 Non è richiesto l'utilizzo di uno specifico ambiente di sviluppo / editor di testo per seguire il corso, l'importante è avere a disposizione un compilatore che supporti almeno *C++11*.
 
-Il nostro consiglio per chi non fosse già dotato di compilatore/editor, è quello di utilizzare il sito **repl.it**. L'ambiente di sviluppo offerto è molto completo, si possono creare file per l'input, ci sono diverse opzioni di condivisione e c'è anche modo di utilizzare il terminale, se siete pratici.
+Il nostro consiglio per chi non fosse già dotato di compilatore/editor, è quello di utilizzare il sito **[repl.it](repl.it)**. L'ambiente di sviluppo offerto è molto completo, si possono creare file per l'input, ci sono diverse opzioni di condivisione e c'è anche modo di utilizzare il terminale, se siete pratici.
 
 Altrimenti, un mio consiglio personale è di utilizzare *Visual Studio Code*.
 
