@@ -8,7 +8,7 @@
 * [C++: I/O da file](#c-io-da-file)
 * [C++: Vector](#c-vector)
 * [Task: easy1](#task-easy1)
-* [Task: ois_streetlights](#task-ois-streetlights)
+* [Task: ois_streetlights](#task-ois_streetlights)
 * [Esercizi da svolgere](#esercizi-da-svolgere)
 
 ## Introduzione al corso
