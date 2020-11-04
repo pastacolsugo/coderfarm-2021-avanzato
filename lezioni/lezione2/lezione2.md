@@ -4,7 +4,7 @@
   * [ois_streetlights](#ois_streetlights)
   * [easy3](#easy3)
 * [Range based for](#range-based-for)
-* [Task: ois_negozi](#introduzione-al-corso)
+* [Task: ois_negozi](#task-ois_negozi)
   * [Soluzione *"naive"* - 50/100](#soluzione-naive)
     * [Velocizzare input/output: 80/100](#velocizzare-io)
     * [Migliorare la ricerca: 80/100](#migliorare-la-ricerca)
