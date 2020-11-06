@@ -73,7 +73,7 @@ Questa è l'idea dell'algoritmo:
     * se **V[M] >= X**, allora **X** non può trovarsi dopo **M** - vorrà dire che il nostro limite destro dovrà aggiornarsi: **R = M**
   
 
-Siccome il ragionamento non è subito immediato, vi invito a fare un po' di prove - prima a mano seguendo il ragionamento riportato qui sopra - poi anche testando e verificando la correttezza di questo codice:
+Siccome il ragionamento non è subito immediato, vi invito a fare un po' di prove (o a guardare qualche [gif](https://i.pinimg.com/originals/e2/9a/31/e29a31c78bcc0d07c612adc77acc09a0.gif) online), prima a mano seguendo il ragionamento riportato qui sopra, poi anche testando e verificando la correttezza di questo codice:
 
 ```cpp
 // restituisce l'indice di x in v, o -1 se l'elemento non è presente
