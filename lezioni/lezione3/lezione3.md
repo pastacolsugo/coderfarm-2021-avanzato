@@ -137,11 +137,11 @@ Trovate il codice che implementa la ricerca binaria sia [qui su github]() che su
 
 ## Esercizi da svolgere
 
-* **[ois_negozi](https://training.olinfo.it/#/task/ois_ruspa/submissions)**
+* **[ois_negozi](https://training.olinfo.it/#/task/ois_ruspa/statement)**
   * abbiamo già visto una soluzoine da **100** punti per *Shopping Stress*, ma riesci a modificarla usando la ricerca binaria per renderla ancora migliore?
-* **[ois_annoluce](https://training.olinfo.it/#/task/ois_annoluce/submissions)**
+* **[ois_annoluce](https://training.olinfo.it/#/task/ois_annoluce/statement)**
   * problema in cui dobbiamo rispondere ad altre query simili usando la ricerca binaria, consigliato!
-* **[fri_terrazzamenti](https://training.olinfo.it/#/task/fri_terrazzamenti/submissions)**
+* **[fri_terrazzamenti](https://training.olinfo.it/#/task/fri_terrazzamenti/statement)**
   * problema piuttosto difficile, proposto per chi volesse provare un esercizio più difficile del solito - ottenere anche solo qualche punto è già un buon punto di partenza!
   * una delle soluzioni da **100** punti richiede un utilizzo molto furbo della ricerca binaria - è un problema interessante, ma vi consiglio di non spenderci troppo tempo se vedete che siete a corto di idee! 
 
