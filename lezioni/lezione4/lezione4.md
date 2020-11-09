@@ -1,4 +1,4 @@
-# Lezione 3
+# Lezione 4
 ## Indice
 * [Task: ois_socks](#task-ois_socks)
 * [C++: Map](#c-map)
@@ -155,9 +155,13 @@ array_sparso[1000000000] = 1;
 
 ### Soluzione ois_socks
 
----
+Ora che conosciamo le `map`, e abbiamo visto come usarle per simulare un'array con indici arbitrariamente grandi, non ci resta che implementare quello che abbiamo menzionato poco fa al termine della [sezione sul problema](#task-ois_socks).
+
+Trovate [qui](ois_socks/ois_socks.cpp) il codice, o anche su [repl](https://repl.it/@FilippoSoldati/oissocks#main.cpp).
 
 ## Somme prefisse
+
+Non ho ancora trovato il tempo per completare questa sezione, ma verrà presto aggiunta!
 
 ---
 
