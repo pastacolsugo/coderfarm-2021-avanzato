@@ -73,9 +73,6 @@ long long stima(int n, int h[]) {
     possiamo quindi simulare questo processo, utilizzando la ricerca
     binaria per scegliere il punto di partenza dei nostri scalini
   */
-  long long best = LLONG_MAX;n
-  int ans = -1; // valore fittizio per iniziare la ricerca
-
   int l = 0;
   int r = 1e9; // valore di inizio massimo
   while(l != r) {
@@ -83,5 +80,16 @@ long long stima(int n, int h[]) {
     // proviamo con m e m+1
     long long val_m = conta(n, h, m);
     long long val_m1 = conta(n, h, m+1);
+
+    // se sta migliorando, spostiamo il limite sinistro
+    if(val_m1 <= val_m) {
+      l = m + 1;
+    }
+    else {
+      // se non migliora, non andiamo oltre m
+      r = m;
+    }
   }
+  // contiamo un'ultima volta
+  return conta(n, h, l);
 }
