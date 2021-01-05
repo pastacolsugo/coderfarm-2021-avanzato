@@ -7,3 +7,4 @@ Trovate qui linkati i riassunti delle lezioni:
 * [2<sup>a</sup> lezione - 20/10/2020 ](lezioni/lezione2/lezione2.md)
 * [3<sup>a</sup> lezione - 27/10/2020 ](lezioni/lezione3/lezione3.md)
 * [4<sup>a</sup> lezione - 03/11/2020 ](lezioni/lezione4/lezione4.md)
+* [5<sup>a</sup> lezione - 10/11/2020 ](lezioni/lezione5/lezione5.md)
