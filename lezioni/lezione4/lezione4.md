@@ -3,6 +3,8 @@
 * [Task: ois_socks](#task-ois_socks)
 * [C++: Map](#c-map)
 * [Soluzione ois_socks](#soluzione-ois_socks)
+* [Somme prefisse](#somme-prefisse)
+* [Task: ois_muffin](#task-ois_muffin)
 * [Esercizi da svolgere](#esercizi-da-svolgere)
 * [C++: Set](#c-set)
 * [C++: Unordered Map/Set](#c-unordered-mapset)
