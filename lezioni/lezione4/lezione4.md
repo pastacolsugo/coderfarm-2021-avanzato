@@ -161,11 +161,44 @@ Trovate [qui](ois_socks/ois_socks.cpp) il codice, o anche su [repl](https://repl
 
 ## Somme prefisse
 
-Non ho ancora trovato il tempo per completare questa sezione, ma verrà presto aggiunta!
+Una tecnica che compare spesso nei problemi di competitive programming è quella delle somme prefisse.
+
+Dato un array **V**, chiamiamo somma prefissa **f(i)** la somma di tutti gli elementi di **V** con indice nell'intervallo **[0, i]**.
+In particolare, **f(0) = v[0]**, mentre **f(1) = v[0] + v[1]**.
+Per comodità, assumiamo che per **f(i) = 0** per ogni **i < 0**. 
+
+<img src="https://i.imgur.com/aeLL1Bg.png" alt="esempio somme prefisse" width="400"/>
+
+
+Ci accorgiamo rapidamente della seguente formula: **f(i) = f(i-1) + v[i]**, che ci permette di calcolare rapidamente tutte le somme prefisse di un array e di memorizzarle in un secondo array, "parallelo" al primo.
+
+<img src="https://i.imgur.com/175mJZ6.png" alt="array somme prefisse" width="400"/>
+
+L'utilizzo principale delle somme prefisse deriva dal fatto che osservando graficamente le somme prefisse possiamo accorgerci che possiamo utilizzarle per calcolare la somma dei valori di qualsiasi subarray di **V**, non solo per i prefissi: infatti, se chiamiamo **sum(i, j)** la somma degli elementi compresi tra gli **i** e **j**, notiamo che **sum(i, j) = f(j) - f(i-1)**.
+
+<img src="https://i.imgur.com/CythF58.png" alt="segmenti prefisse" width="450">
+
+Possiamo dimostrarlo anche direttamente, sviluppando l'equazione abbiamo infatti:
+
+**sum(i, j) = f(j) - f(i) =**
+**v[0] + [...] + v[i] + [...] + v[j] - (v[0] + [...] + v[i-1]) =**
+**v[0] + [...] + v[i] + [...] + v[j] - v[0] - [...] - v[i-1]**
+
+A questo punto, possiamo semplificare i termini negativi con quelli positivi, rimanendo con:
+
+**sum(i, j) = v[i] + [...] + v[j]**, che coincide con la definizione che abbiamo dato di **sum**.
+
+Quando ci troviamo di fronte a un problema in cui ci viene richiesto di calcolare somme di interi intervalli di un array, può essere una buona idea chiedersi se le somme prefisse potrebbero in qualche modo aiutarci. In futuro, vedremo anche come utilizzare questa idea si possa estendere e applicare anche in contesti più complessi e dinamici.
 
 ---
 
 ### Task: ois_muffin
+
+Nel problema [Muffin Selection (ois_muffin)](https://training.olinfo.it/#/task/ois_muffin/statement), ci viene dato un vettore **V** lungo **N** e ci viene chiesto di trovare il subarray di lunghezza **K** di somma massima.
+
+Potremmo risolverlo anche in altri modi, ma se conosciamo il funzionamento delle somme prefisse allora diventa semplice risolverlo in modo diretto: siccome possiamo calcolare la somma di qualsiasi intervallo dell'array in **O(1)**, ci basterà prima calcolare le somme prefisse e dopo iterare su tutti i possibili subarray lunghi **K**, calcolando la loro somma con la formula che abbiamo appena visto.
+
+Trovate [qui](ois_muffin/ois_muffin.cpp) il codice, commentato.
 
 ---
 
