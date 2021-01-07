@@ -14,8 +14,7 @@ Alcuni esempi banali possono essere:
 <img src="https://i.imgur.com/8K7V3rD.png" alt="amicizie facebook" width="350"/>
 * le strade di una città, ciascuna con la sua lunghezza:
 <img src="https://i.imgur.com/7KY4Z7Q.png" alt="rete stradale" width="350"/>
-* l'insieme degli account di Instagram collegati con i rispettivi "
-"follow":
+* l'insieme degli account di Instagram collegati con i rispettivi "follow":
 <img src="https://i.imgur.com/HZscGuN.png" alt="follow instagram" width="350"/>
 
 Nonostante ciascuno di questi esempi sia abbastanza self-explanatory, osservandoli riusciamo già a ricavarci un sacco di informazioni sulle caratteristiche che può avere un grafo.
@@ -323,7 +322,7 @@ while(current != s) {
   Sono sempre 3 aggiunte, ma un po' più semplici ;)
 
 3. Il terzo metodo è indubbiamente il più furbo, pur essendo il più ignorante - l'idea è semplice: se Harmony non arriva da Spike dopo MOLTE gallerie, allora dev'essere impossibile per Harmony arrivarci.
-  Sebbene non sia necessario dimostrarlo, dato che come idea sembra intuitivamente corretta, è possibile farlo: un metodo è quello del "pigeon hole principle" - siccome ci sono in totale **N** nodi diversi, è impossibile che dopo aver preso **N** gallerie non si sia visitato uno stesso nodo **2** volte. Possiamo quindi usare **N** come limite per terminare la visita, ma il trucco funziona anche usando un valore più grande, come **10^6** o anche **10^7**, senza bisogno di ragionare tanto :)
+  Sebbene non sia necessario dimostrarlo, dato che come idea sembra intuitivamente corretta, è possibile farlo: un metodo è quello del "pigeon hole principle" - siccome ci sono in totale **N** nodi diversi, è impossibile che dopo aver preso **N** gallerie non si sia visitato uno stesso nodo **2** volte. Possiamo quindi usare **N** come limite per terminare la visita, ma il trucco funziona anche usando un valore più grande, come **10<sup>6</sup>** o anche **10<sup>7</sup>**, senza bisogno di ragionare tanto :)
 
 ```cpp
 vector<bool> visited(n, false);
@@ -353,4 +352,22 @@ Tuttavia, per chi avesse voglia di approfondire un ulteriore argomento, vi lasci
 
 ## Matrici di adiacenza
 
-Questo argomento non è stato trattato durante la lezione, pertando non l'ho ancora inserito nei riassunti - sarà aggiunto quando ne avrò il tempo, siccome fortemente correlato alle liste di adiacenza, tuttavia più limitato nei casi d'uso.
+Abbiamo visto che con le liste di adiacenza, possiamo rappresentare un grafo [di N nodi, M archi] usando una memoria totale di **O(N + M)** - siccome avremo **N** vector contenenti un totale di **M** elementi.
+Questo è molto conveniente, soprattutto quando **N** e **M** sono dello stesso ordine di grandezza (ad esempio, **N <= 10<sup>5</sup>**, **M <= 3 * 10<sup>5</sup>**), o più in generale quando stiamo gestendo grafi "sparsi" (non "densi").
+
+Ci sono alcune cose che però le liste di adiacenza non ci permettono di fare in modo rapido, come ad esempio verificare l'esistenza di uno specifico arco (*vedi paragrafo in fondo).
+
+Sarebbe molto semplice invece identificare questa cosa, se anziché usare vettori di vettori usassimo invece una tabella: le righe indicano il nodo di partenza, e le colonne il nodo di arrivo - se esiste un collegamento avremo un **1**, altrimenti uno **0**
+
+<img src="https://i.imgur.com/nFDHwLE.png" alt="matrice instagram" width="350"/>
+
+*Matrice di adiacenza che rappresenta l'esempio di "Instagram" presentato a inizio lezione, in cui è visibile lo "spreco di memoria"*
+
+Questa rappresentazione prende il nome di "matrice di adiacenza", e se ha il vantaggio di permetterci di controllare rapidamente (in **O(1)**) la presenza di un arco nel grafo, ha due grossi svantaggi:
+* Ha un utilizzo di memoria non più di **O(M)**, ma di **O(N<sup>2</sup>)** - questo la rende praticamente inutilizzabile in tutti i problemi con **N > 10<sup>4</sup>**, rimanendo di fatto utilizzabile in quelle circostanze in cui ci si trova di fronte a grafi "densi" (dove quindi **M** è già dello stesso ordine di grandezza di **O(N<sup>2</sup>)**, cosa che rende quasi nulli i vantaggi della lista di adiacenza).
+* Non è più possibile iterare sugli archi in uscita da un nodo in un tempo direttamente proporzionale al numero di archi effettivamente presenti - poiché nella riga relativa a ciascun nodo saranno presenti anche tutti gli archi "nulli", segnati come **0**
+
+Ovviamente, usando interi al posto di booleani, le matrici di adiacenza possono anche rappresentare grafi pesati, basterà sostituire a **1** il peso di ciascun arco. Se **0** potrebbe essere un valore valido per un arco, sarà necessario sostiurlo con un peso non valido, come ad esempio **-1** o **-INFINITO**.
+
+*** 
+*Modificando la struttura della lista di adiacenza (o aggiungendo strutture addizionali di supporto) in realtà è comunque possibile svolgere questa cosa - alcuni esempi potrebbero essere sortare gli archi in uscita da ciascun nodo e poi utilizzare *binary search*; oppure sostituire il vector usato per ciascun nodo con un `set`, una `map`, un `unordered_set`, o via dicendo, a seconda delle esigenze - ovviamente ciascuna di queste alternative avrà i suoi "tradeoff", e starà a voi in base al problema valutare cosa sarà meglio utilizzare.
