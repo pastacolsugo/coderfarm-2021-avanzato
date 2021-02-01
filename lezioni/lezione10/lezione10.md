@@ -1,16 +1,9 @@
 # Lezione 10
-## Indice
-* [BFS: Breadth-First Search](#bfs-breadth-first-search)
-* [Task: ois_monete](#task-ois_monete)
-* [Distanza in archi](#distanza-in-archi)
-* [SPFA: Shortest Path Faster Algorithm](#spfa-shortest-path-faster-algorithm)
 
-## MST: Minimum Spanning Tree
-(contesto ed esempio)
+## Algoritmo di Prim / Dijkstra
 
-## Task: mst
-### Soluzione naive: O(N<sup>2</sup>)
-## DSU: Disjoin Set Union-find
-### Implementazione naive: O(M*N)
-### Union by rank: O(MlogN)
-### Path compression
+La decima lezione era stata registrata, tuttavia senza audio :sweat_smile:
+
+Un riassunto a grandi linee dell'algoritmo di Prim è stato registrato durante la lezione successiva: [clicka qui](https://drive.google.com/file/d/1_81ecjhoMtAjc9carlUCAqRE6ixcoAy7/view?usp=sharing).
+
+
